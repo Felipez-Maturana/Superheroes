@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Superheroes</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+    	body
+    	{
+    		background-image: url("<%= asset_path('superman.jpg') %>");
+    	}
+
+    	.supermantext
+    	{
+    		text-align: center;
+    		color: white;
+    	}
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
