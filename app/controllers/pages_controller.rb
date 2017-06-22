@@ -1,14 +1,18 @@
 class PagesController < ApplicationController
   def batman
-	@votossupermen = VotosSuperman.all
+	
   end
   def batmanvssuperman
   	render layout: "batmanvssuperman"
   	@votossupermen = VotosSuperman.all
+    @votos_batman = VotosBatman.all
+    
+    @a=2;
+
   end
   def superman
-  	render layout: "supermanlayout" 
-  	@votossupermen = VotosSuperman.all
+    render layout: "supermanlayout" 
+  
   end
 
   def votos_superman
