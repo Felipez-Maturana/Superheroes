@@ -1,15 +1,59 @@
+
 <div class="container">
+<div class="jumbotron"><span id="alert"><%= alert %> </span>
+    <span id="notice"><%= notice %></span></div>
 	<div class="row">
-		<div class="col-md-6 col-lg-6 col-xs-6">
+		<div class="col-md-6 col-lg-6 col-xs-6">	
+		<h3>VOTOS: </h3>
 		<a href="/pages/batman">	
 			<%= image_tag('batman1.png') %>
 		</a>
+			<div class="formbatman">
+				<%= form_tag(action: "votos_batman") do %>
+					<div>	
+						<%= label_tag :nombre, "Nombre" %>
+						<%= text_field_tag :nombre %>
+					</div>
+					<div>	
+						<%= label_tag :email, "Email" %>
+						<%= text_field_tag :email %>
+					</div>
+
+					<div>
+						<%= submit_tag "Enviar", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+					</div>
+				<% end %>
+			</div>
 		</div>
+
 		<div class="col-md-6 col-lg-6 col-xs-6">
+			<h3>VOTOS: <%= @votossupermen %></h3>
 			<a href="/pages/superman"> 
+			
 			<%= image_tag('superman1.png') %>
 			</a>
+			<div class="formsuperman">
+				<%= form_tag(action: "votos_superman") do %>
+					<div>	
+						<%= label_tag :nombre, "Nombre" %>
+						<%= text_field_tag :nombre %>
+					</div>
+					<div>	
+						<%= label_tag :email, "Email" %>
+						<%= text_field_tag :email %>
+					</div>
+
+					<div>
+						<%= submit_tag "Enviar", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+					</div>
+				<% end %>
+			</div>
 		</div>
+		
+		<ul>
+
+
+
 	</div>
 
 </div>
